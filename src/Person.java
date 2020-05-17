@@ -5,7 +5,7 @@ public class Person {
     private String id;
 
     public Person(String firsName, String lastName, int age, String id) throws NameUndefinedException, IncorrectAgeException {
-        checkNameAndAge(firsName,age);
+        checkNameAndAge(firsName, age);
         this.firsName = firsName;
         this.lastName = lastName;
         this.age = age;
@@ -15,7 +15,7 @@ public class Person {
     private void checkNameAndAge(String firsName, int age) throws NameUndefinedException, IncorrectAgeException {
         if (firsName.equals(null) || (firsName.length() < 2))
             throw new NameUndefinedException("Nie podałeś imienie lub wpisałeś za mało liter");
-        else if (age <1)
+        else if (age < 1)
             throw new IncorrectAgeException("Nie podałeś prawidłowego wieku");
     }
 
